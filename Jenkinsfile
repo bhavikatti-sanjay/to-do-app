@@ -17,7 +17,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'manishpawar') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'sanjaybhavikatti') {
                         docker.image(registry + ":${env.BUILD_ID}").push('latest')
                     }
                 }
